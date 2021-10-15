@@ -297,6 +297,8 @@ globalkeys = gears.table.join(
               {description = "select next", group = "layout"}),
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
               {description = "select previous", group = "layout"}),
+    awful.key({ modkey, "Shift", "Control"	}, "l", function () awful.spawn.with_shell("i3lock -i ~/.dotfiles/awesome/i3lock/error.png")	end,
+              {description = "lock computer", group = "awesome"}),
 
     awful.key({ modkey, "Control" }, "n",
               function ()
@@ -490,7 +492,7 @@ awful.rules.rules = {
 
     -- Add titlebars to normal clients and dialogs
     { rule_any = {type = { "normal", "dialog" }
-      }, properties = { titlebars_enabled = true }
+      }, properties = { titlebars_enabled = false }
     },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
