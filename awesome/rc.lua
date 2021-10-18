@@ -567,4 +567,5 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- run on startup
 awful.spawn.with_shell("~/.config/wpg/wp_init.sh")
 awful.spawn.with_shell("picom -b --experimental-backends")
+awful.spawn.with_shell("udiskie &")
 -- }}}
