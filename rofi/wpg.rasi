@@ -1,24 +1,24 @@
 /*-*- mode: css; -*-*/
 
 * {
-    color0:		#352023;
-    color1:		#ee7f3f;
-    color2:		#8d9f41;
-    color3:		#c99051;
-    color4:		#516f6f;
-    color5:		#8d5256;
-    color6:		#7c8759;
-    color7:		#dcc280;
-    color8:		#543237;
-    color9:		#ff9f3e;
-    color10:	#c0dd45;
-    color11:	#ffbc56;
-    color12:	#5c9c9c;
-    color13:	#c55c63;
-    color14:	#a8be65;
-    color15:	#ffffac;
-    active:		#99b037;
-    inactive:	#697926;
+    color0:		#00001B;
+    color1:		#64039F;
+    color2:		#7A4DBD;
+    color3:		#5E22CF;
+    color4:		#544EE6;
+    color5:		#9C05A3;
+    color6:		#DC0FA5;
+    color7:		#d197e2;
+    color8:		#92699e;
+    color9:		#64039F;
+    color10:	#7A4DBD;
+    color11:	#5E22CF;
+    color12:	#544EE6;
+    color13:	#9C05A3;
+    color14:	#DC0FA5;
+    color15:	#d197e2;
+    active:		#af0c83;
+    inactive:	#78085a;
 
 	background:						@color0;
     foreground:						@color15;
@@ -35,19 +35,19 @@
     selected-normal-background:		@active;
     selected-normal-foreground:		@foreground;
 
-    active-background:				@active;
+    active-background:				@inactive;
     active-foreground:				@foreground;
     alternate-active-background:	@active;
     alternate-active-foreground:	@foreground;
-    selected-active-background:		@color13;
-    selected-active-foreground:		@color15;
+    selected-active-background:		@active;
+    selected-active-foreground:		@foreground;
 
     urgent-background:				@color8;
     urgent-foreground:				@color15;
     alternate-urgent-background:	@color8;
     alternate-urgent-foreground:	@color15;
     selected-urgent-background:		@color14;
-    selected-urgent-foreground:		@color15;
+    selected-urgent-foreground:		@foreground;
 }
 
 
