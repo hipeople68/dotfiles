@@ -170,11 +170,16 @@ awful.screen.connect_for_each_screen(function(s)
 
     -- Each screen has its own tag table.
     awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
-    --awful.tag.add("spotify", {
-    --  icon = "/home/emma/tmp.png",
-    --	    screen = s, 
-    -- 	    layout = awful.layout.suit.max,
-    --})
+	awful.tag.add("", {
+		icon = "/home/emma/.config/awesome/themes/nord/assets/world.png",
+		screen = s, 
+		layout = awful.layout.suit.max,
+	})
+	awful.tag.add("", {
+		icon = "/home/emma/.config/awesome/themes/nord/assets/game.png",
+		screen = s, 
+		layout = awful.layout.suit.max,
+	})
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -201,7 +206,7 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s })
+    s.mywibox = awful.wibar({ position = "top", screen = s, height = 24 })
 
     -- Add widgets to the wibox
     s.mywibox:setup {
