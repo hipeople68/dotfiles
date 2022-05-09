@@ -21,6 +21,8 @@ settings:
     global: true
   content.blocking.method:
     global: auto
+  content.media.audio_capture:
+    https://discord.com: true
   scrolling.smooth:
     global: false
   statusbar.position:

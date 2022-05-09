@@ -180,6 +180,31 @@ awful.screen.connect_for_each_screen(function(s)
 		screen = s, 
 		layout = awful.layout.suit.max,
 	})
+	awful.tag.add("", {
+		icon = "/home/emma/.config/awesome/themes/nord/assets/flake1.png",
+		screen = s, 
+		layout = awful.layout.suit.max,
+	})
+	awful.tag.add("", {
+		icon = "/home/emma/.config/awesome/themes/nord/assets/flake2.png",
+		screen = s, 
+		layout = awful.layout.suit.max,
+	})
+	awful.tag.add("", {
+		icon = "/home/emma/.config/awesome/themes/nord/assets/flake3.png",
+		screen = s, 
+		layout = awful.layout.suit.max,
+	})
+	awful.tag.add("", {
+		icon = "/home/emma/.config/awesome/themes/nord/assets/flake4.png",
+		screen = s, 
+		layout = awful.layout.suit.max,
+	})
+	awful.tag.add("", {
+		icon = "/home/emma/.config/awesome/themes/nord/assets/flake5.png",
+		screen = s, 
+		layout = awful.layout.suit.max,
+	})
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
