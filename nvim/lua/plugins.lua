@@ -8,5 +8,8 @@ return require('packer').startup(function()
 
 	--treesitter
 	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+	
+	--status bar
+	use 'feline-nvim/feline.nvim'
 
 end)

@@ -17,13 +17,20 @@ require('plugins')
 --options
 opt.linebreak = true
 opt.number = true
+opt.tgc = true
 
 --Treesitter
 require'nvim-treesitter.configs'.setup {
-	ensure_installed = "maintained",
+	ensure_installed = "all",
 	sync_install = true,
 	highlight = {
 		enable = true, 
 		additional_vim_regex_highlighting = false, 
 	}, 
 }
+--status bar
+require('feline').setup({
+	preset = 'slant'
+})
+
+vim.cmd[[colorscheme nord]]
