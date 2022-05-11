@@ -29,8 +29,6 @@ require'nvim-treesitter.configs'.setup {
 	}, 
 }
 --status bar
-require('feline').setup({
-	preset = 'slant'
-})
+require('lualine').setup()
 
 vim.cmd[[colorscheme nord]]
