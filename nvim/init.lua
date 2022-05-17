@@ -31,4 +31,7 @@ require'nvim-treesitter.configs'.setup {
 --status bar
 require('lualine').setup()
 
+--file explorer
+require'nvim-tree'.setup {
+}
 vim.cmd[[colorscheme nord]]

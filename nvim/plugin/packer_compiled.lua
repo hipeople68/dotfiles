@@ -94,6 +94,11 @@ _G.packer_plugins = {
     needs_bufread = false,
     path = "/home/emma/.local/share/nvim/site/pack/packer/opt/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  ["vim-sneak"] = {
+    loaded = true,
+    path = "/home/emma/.local/share/nvim/site/pack/packer/start/vim-sneak",
+    url = "https://github.com/justinmk/vim-sneak"
   }
 }
 
@@ -103,6 +108,5 @@ if should_profile then save_profiles() end
 end)
 
 if not no_errors then
-  error_msg = error_msg:gsub('"', '\\"')
   vim.api.nvim_command('echohl ErrorMsg | echom "Error in packer_compiled: '..error_msg..'" | echom "Please check your config for correctness" | echohl None')
 end

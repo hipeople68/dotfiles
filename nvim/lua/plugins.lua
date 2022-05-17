@@ -11,7 +11,16 @@ return require('packer').startup(function()
 	
 	--status bar
 	use { 'nvim-lualine/lualine.nvim', 
-	requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+	}
+
+	--navigation
+	use 'justinmk/vim-sneak'
+
+	--file tree
+	use {'kyazdani42/nvim-tree.lua', 
+		requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+		tag = 'nightly' 
 	}
 
 end)

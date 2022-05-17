@@ -11,6 +11,10 @@ settings:
       normal:
         ',M': hint links spawn mpv {hint-url}
         ',m': spawn mpv {url}
+        F: null
+        S: hint links tab
+        f: null
+        s: hint
   colors.webpage.bg:
     global: white
   colors.webpage.darkmode.enabled:
