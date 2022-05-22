@@ -598,6 +598,13 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
+--set refresh rate
+pc = io.open ("/proc/sys/kernel/hostname")
+if(pc == "empc01")
+then
+	awful.spawn.with_shell("xrandr -r 144")
+end
+
 -- run on startup
 awful.spawn.with_shell("easyeffects --gapplication-service")
 awful.spawn.with_shell("picom -b --experimental-backends")

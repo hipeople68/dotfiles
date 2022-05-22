@@ -34,6 +34,6 @@ settings:
   tabs.position:
     global: left
   tabs.show:
-    global: switching
+    global: always
   tabs.width:
     global: 15%
