@@ -1,0 +1,5 @@
+[output *]
+image=/home/emma/Pictures/Wallpapers/current
+filter=nearest
+scaling-mode=fill
+anchor=center

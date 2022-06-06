@@ -24,7 +24,6 @@ set $menu wofi --show drun
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * {
-	bg /home/emma/Pictures/Wallpapers/current.png fill
 }
 #
 # Example configuration:
@@ -216,7 +215,12 @@ bar {
 	swaybar_command waybar
 }
 
+#window options
+gaps outer 4
+gaps inner 4
 
+
+exec oguri
 include {
 	/etc/sway/config.d/*
 }
