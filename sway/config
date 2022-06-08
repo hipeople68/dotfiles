@@ -221,6 +221,7 @@ gaps inner 4
 
 
 exec oguri
+exec udiskie &
 include {
 	/etc/sway/config.d/*
 }
