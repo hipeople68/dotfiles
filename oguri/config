@@ -1,5 +1,17 @@
-[output *]
-image=/home/emma/Pictures/Wallpapers/current
-filter=nearest
+[output DP-2]
+image=/home/emma/Pictures/Wallpapers/mid
+filter=best
+scaling-mode=fill
+anchor=center
+
+[output HDMI-A-1]
+image=/home/emma/Pictures/Wallpapers/right
+filter=best
+scaling-mode=fill
+anchor=center
+
+[output HDMI-A-2]
+image=/home/emma/Pictures/Wallpapers/left
+filter=best
 scaling-mode=fill
 anchor=center

@@ -35,6 +35,18 @@ output DP-2 mode {
 	1920x1080@144.001Hz
 }
 
+output DP-2 pos {
+	1920 0
+}
+
+output HDMI-A-2 mode {
+	1920x1080@60.000Hz
+}
+
+output HDMI-A-2 pos {
+	0 0
+}
+
 ### Idle configuration
 #
 # Example configuration:
@@ -220,7 +232,7 @@ gaps outer 4
 gaps inner 4
 
 
-exec oguri
+exec ~/.config/oguri/random_wall.sh
 exec udiskie &
 include {
 	/etc/sway/config.d/*
