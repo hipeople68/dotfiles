@@ -1,0 +1,15 @@
+#!/bin/sh
+
+#startup hotkey daemon
+swhks &
+pkexec swhkd
+
+#output manager
+kanshi
+
+#tiling daemon
+riverctl default-layout rivertile
+
+#random wallpaper script
+/home/emma/.config/oguri/random_wall.sh
+
