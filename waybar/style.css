@@ -96,12 +96,13 @@ window#waybar.chromium {
 }
 
 #clock {
-    background-color: #64727D;
+    background-color: #81A1C1;
+    color: #2E3340;
     padding: 0px 2px 0px 2px;
 }
 
 #battery {
-    background-color: #ECEFF4;
+    background-color: #88C0D0;
     color: #2E3440;
     padding: 0px 2px 0px 2px;
 }
@@ -136,44 +137,49 @@ label:focus {
 }
 
 #cpu {
-    background-color: #2ecc71;
+    background-color: #A3BE8C;
     color: #2E3440;
     padding: 0px 2px 0px 2px;
 }
 
 #memory {
-    background-color: #9b59b6;
+    background-color: #B48EAD;
     padding: 0px 2px 0px 2px;
+    color: #2E3440;
 }
 
 #disk {
     background-color: #964B00;
+    color: #2E3440;
     padding: 0px 2px 0px 2px;
 }
 
 #backlight {
-    background-color: #90b1b1;
+    background-color: #8FBCBB;
+    color: #2E3440;
     padding: 0px 2px 0px 2px;
 }
 
 #network {
-    background-color: #2980b9;
+    background-color: #5E81AC;
+    color: #2E3440;
     padding: 0px 2px 0px 2px;
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
+    background-color: #BF616A;
+    color: #2E3440;
     padding: 0px 2px 0px 2px;
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
+    background-color: #EBCB8B;
     color: #2E3440;
     padding: 0px 2px 0px 2px;
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
+    background-color: #8FBCBB;
     color: #2a5c45;
     padding: 0px 2px 0px 2px;
 }
@@ -196,12 +202,13 @@ label:focus {
 }
 
 #temperature {
-    background-color: #f0932b;
+    background-color: #EBCB8B;
+    color: #2E3440;
     padding: 0px 2px 0px 2px;
 }
 
 #temperature.critical {
-    background-color: #eb4d4b;
+    background-color: #BF616A;
     padding: 0px 2px 0px 2px;
 }
 
@@ -222,19 +229,20 @@ label:focus {
 }
 
 #idle_inhibitor {
-    background-color: #2d3436;
+    background-color: #88C0D0;
+    color: #2d3436;
     padding: 0px 2px 0px 2px;
 }
 
 #idle_inhibitor.activated {
-    background-color: #ecf0f1;
+    background-color: #BF616A;
     color: #2d3436;
     padding: 0px 2px 0px 2px;
 }
 
 #language {
-    background: #00b093;
-    color: #740864;
+    background: #A3BE8C;
+    color: #2E3440;
     padding: 0 2px 0 2px;
     margin: 0 5px;
     min-width: 16px;
