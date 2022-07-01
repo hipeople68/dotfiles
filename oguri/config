@@ -15,3 +15,9 @@ image=/home/emma/Pictures/Wallpapers/left
 filter=best
 scaling-mode=fill
 anchor=center
+
+[output eDP-1]
+image=/home/emma/Pictures/Wallpapers/mid
+filter=best
+scaling-mode=fill
+anchor=center

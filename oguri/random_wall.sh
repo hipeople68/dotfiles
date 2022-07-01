@@ -7,7 +7,7 @@ for file in $(find ~/Pictures/Wallpapers -type f | shuf -n 3)
 do
 	if (( $count == 0 ))
 	then
-		mv $file ~/Pictures/Wallpapers/right
+		mv $file ~/Pictures/Wallpapers/mid
 	else
 		if (( $count == 1 ))
 		then
@@ -15,7 +15,7 @@ do
 		else
 			if (( $count == 2 ))
 			then
-				mv $file ~/Pictures/Wallpapers/mid
+				mv $file ~/Pictures/Wallpapers/right
 			fi
 		fi
 	fi
