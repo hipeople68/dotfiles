@@ -1,0 +1,6 @@
+format = """
+$directory$git_status
+$character
+"""
+
+add_newline = false
