@@ -1,4 +1,11 @@
-mod4 + enter 
+#terminal
+mod4 + enter
 	kitty
+
+#run menu
 mod4 + r
 	wofi -iS drun
+	
+#river controls
+mod4 + shift + c
+	riverctl close
