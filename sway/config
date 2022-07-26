@@ -234,6 +234,8 @@ gaps inner 4
 
 exec ~/.config/oguri/random_wall.sh
 exec udiskie &
+exec easyeffects -w 
+exec dunst
 include {
 	/etc/sway/config.d/*
 }

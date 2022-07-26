@@ -1,15 +1,25 @@
 #!/bin/sh
 
+#tiling daemon
+riverctl default-layout rivertile
+
+#fix for slow app launching
+systemctl --user import-environment DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+hash dbus-update-activation-environment 2>/dev/null && \
+	dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 #startup hotkey daemon
 swhks &
 pkexec swhkd
 
 #output manager
-kanshi
+kanshi &
 
-#tiling daemon
-riverctl default-layout rivertile
+#bar
+waybar &
+
+#startup programs
+dunst &
+udiskie &
 
 #random wallpaper script
 /home/emma/.config/oguri/random_wall.sh
-

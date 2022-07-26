@@ -1,2 +1,4 @@
 mod4 + enter 
 	kitty
+mod4 + r
+	wofi -iS drun
