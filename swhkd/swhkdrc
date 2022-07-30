@@ -1,2 +1,40 @@
-mod4 + enter 
-	kitty
+#all binds are converted from dvorak to qwerty
+
+#run menu
+#actually mod4 + r
+mod4 + o
+    wofi -iS drun 
+
+#terminal
+mod4 + enter
+    kitty
+
+#web browser
+#actually mod4 + w
+mod4 + ,
+    firefox	
+
+#river controls
+
+#actually mod4 + shift + c
+mod4 + shift + i
+    riverctl close
+
+#actually mod4 + shift + e
+mod4 + shift + d
+    riverctl exit
+
+mod4 + shift + space
+    riverctl toggle float
+
+#actually mod4 + f
+mod4 + y
+    riverctl toggle-fullscreen
+
+#actually mod4 + q
+mod4 + x
+    riverctl focus-view previous
+
+#actually mod4 + j
+mod4 + c
+    riverctl focus-view next
