@@ -7,31 +7,26 @@ hash dbus-update-activation-environment 2>/dev/null && \
 
 #output manager
 kanshi &
-echo "3"
 
 #bar
 waybar &
-echo "4"
 
 #startup programs
 pipewire &
-echo "5"
 wireplumber &
-echo "6"
 dunst &
-echo "7"
 udiskie &
-echo "8"
 
 #random wallpaper script
 /home/emma/.config/oguri/random_wall.sh
-echo "done"
 
 #startup hotkey daemon
 swhks &
-echo "1"
 pkexec swhkd &
-echo "2"
+
+#input configuration
+riverctl input pointer-5426-123-Razer_Razer_Viper_Ultimate_Dongle accel-profile flat
+riverctl input pointer-5426-123-Razer_Razer_Viper_Ultimate_Dongle pointer-accel 0.0
 
 #tiling daemon
 riverctl default-layout rivertile
