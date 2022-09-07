@@ -231,8 +231,8 @@ bar {
 gaps outer 4
 gaps inner 4
 
-
-exec ~/.config/oguri/random_wall.sh
+exec swww init
+exec swww img /home/emma/Pictures/Wallpapers/tmp.webp
 exec udiskie &
 exec easyeffects -w 
 exec dunst
