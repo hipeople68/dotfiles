@@ -16,6 +16,7 @@ pipewire &
 wireplumber &
 dunst &
 udiskie &
+chronyd &
 
 #random wallpaper script
 /home/emma/.config/oguri/random_wall.sh
