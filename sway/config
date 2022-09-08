@@ -231,8 +231,7 @@ bar {
 gaps outer 4
 gaps inner 4
 
-exec swww init
-exec swww img /home/emma/Pictures/Wallpapers/tmp.webp
+exec /home/emma/.dotfiles/lapwall.sh
 exec udiskie &
 exec easyeffects -w 
 exec dunst
