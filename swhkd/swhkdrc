@@ -31,10 +31,26 @@ mod4 + shift + space
 mod4 + y
     riverctl toggle-fullscreen
 
-#actually mod4 + q
-mod4 + x
+#actually mod4 + k
+mod4 + v
     riverctl focus-view previous
 
 #actually mod4 + j
 mod4 + c
     riverctl focus-view next
+
+#actually mod4 + l
+mod4 + p
+	riverctl focus-output next
+
+#actually mod4 + h
+mod4 + e
+	riverctl focus-output previous
+
+#actually mod4 + shift + l
+mod4 + shift + p
+	riverctl send-to-output next
+
+#actually mod4 + shift + h
+mod4 + shift + e
+	riverctl send-to-output previous

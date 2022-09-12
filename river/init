@@ -19,7 +19,7 @@ udiskie &
 chronyd &
 
 #random wallpaper script
-/home/emma/.config/oguri/random_wall.sh
+/home/emma/.dotfiles/lapwall.sh
 
 #startup hotkey daemon
 swhks &
