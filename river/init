@@ -19,7 +19,8 @@ udiskie &
 chronyd &
 
 #random wallpaper script
-/home/emma/.dotfiles/lapwall.sh
+swww init
+/home/emma/.dotfiles/deskwall.sh
 
 #startup hotkey daemon
 swhks &

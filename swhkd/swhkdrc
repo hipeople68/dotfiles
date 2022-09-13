@@ -44,7 +44,7 @@ mod4 + p
 	riverctl focus-output next
 
 #actually mod4 + h
-mod4 + e
+mod4 + j
 	riverctl focus-output previous
 
 #actually mod4 + shift + l
@@ -52,5 +52,5 @@ mod4 + shift + p
 	riverctl send-to-output next
 
 #actually mod4 + shift + h
-mod4 + shift + e
+mod4 + shift + j
 	riverctl send-to-output previous
