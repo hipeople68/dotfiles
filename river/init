@@ -28,7 +28,7 @@ pkexec swhkd &
 
 #input configuration
 riverctl input pointer-5426-123-Razer_Razer_Viper_Ultimate_Dongle accel-profile flat
-riverctl input pointer-5426-123-Razer_Razer_Viper_Ultimate_Dongle pointer-accel 0.0
+riverctl input pointer-5426-123-Razer_Razer_Viper_Ultimate_Dongle pointer-accel -0.5
 
 #tiling daemon
 riverctl default-layout rivertile
