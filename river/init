@@ -32,4 +32,5 @@ riverctl input pointer-5426-123-Razer_Razer_Viper_Ultimate_Dongle pointer-accel 
 
 #tiling daemon
 riverctl default-layout rivertile
-rivertile -view-padding 6 -outer-padding 6
+riverctl attach-mode bottom
+rivertile -view-padding 4 -outer-padding 4

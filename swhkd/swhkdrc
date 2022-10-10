@@ -39,6 +39,14 @@ mod4 + v
 mod4 + c
     riverctl focus-view next
 
+#actually mod4 + shift + k
+mod4 + shift + v
+    riverctl swap previous
+
+#actually mod4 + shift + j
+mod4 + shift + c
+    riverctl swap next
+
 #actually mod4 + l
 mod4 + p
 	riverctl focus-output next
@@ -54,3 +62,27 @@ mod4 + shift + p
 #actually mod4 + shift + h
 mod4 + shift + j
 	riverctl send-to-output previous
+
+#actually mod4 + shift + r
+mod4 + shift + o
+	@enter resize
+
+mode resize
+escape
+	@escape
+#l
+p
+	riverctl resize horizontal -5
+#h
+j
+	riverctl resize horizontal 5
+#j
+c
+	riverctl resize vertical -5
+#k
+v
+	riverctl resize vertical 5
+shift + j
+	riverctl send-layout-cmd rivertile "main-ratio +0.001"
+shift + p
+	riverctl send-layout-cmd rivertile "main-ratio -0.001"
