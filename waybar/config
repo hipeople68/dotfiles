@@ -5,39 +5,10 @@
     //"width": 1280, // Waybar width
     "spacing": 3, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
-    "modules-center": ["sway/window"],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "tray"],
+    "modules-left": ["custom/media"],
+    "modules-center": [],
+    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "battery", "battery#bat2", "clock", "tray"],
     //Modules configuration
-    "sway/workspaces": {
-         "disable-scroll": true,
-         "all-outputs": true,
-         "format": "{icon}",
-	 "persistent_workspaces": {
-	 	"1": [],
-	 	"2": [],
-	 	"3": [],
-	 	"4": [],
-	 	"5": [],
-	 	"6": [],
-	 	"7": [],
-	 	"8": [],
-	 	"9": [],
-	 	"10": []
-},
-         "format-icons": {
-             "1": "",
-             "2": "",
-             "3": "",
-             "4": "",
-             "5": "",
-             "6": "",
-             "7": "",
-             "8": "",
-             "9": "",
-             "10": ""
-         }
-     },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -46,9 +17,6 @@
             "locked": "",
             "unlocked": ""
         }
-    },
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
     },
 
     "idle_inhibitor": {
