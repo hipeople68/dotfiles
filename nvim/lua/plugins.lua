@@ -15,12 +15,39 @@ return require('packer').startup(function()
 	}
 
 	--navigation
-	use 'justinmk/vim-sneak'
+	use {
+		'ggandor/leap.nvim',
+		requires = { {'tpope/vim-repeat'} }
+	}
 
 	--file tree
 	use {'kyazdani42/nvim-tree.lua', 
 		requires = { 'kyazdani42/nvim-web-devicons', opt = true },
 		tag = 'nightly' 
 	}
+	
+	--autopairs
+	use {
+		"windwp/nvim-autopairs",
+		--config = function() require("nvim-autopairs").setup {} end
+	}
 
+	--telescope
+	use {
+		'nvim-telescope/telescope.nvim', branch = '0.1.x',
+		  requires = { {'nvim-lua/plenary.nvim'} }
+	}
+
+	--whichkey
+	use {
+		'folke/which-key.nvim'
+	}
+
+	--bufferline
+	--use {
+	--	'akinsho/bufferline.nvim',tag = "v3.*", 
+	--	requires = 'kyazdani42/nvim-web-devicons'
+	--}
+	
+	--completion and snippets
 end)

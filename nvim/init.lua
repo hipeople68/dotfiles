@@ -18,6 +18,7 @@ require('plugins')
 opt.linebreak = true
 opt.number = true
 opt.tgc = true
+opt.termguicolors = true
 
 --Treesitter
 require'nvim-treesitter.configs'.setup {
@@ -34,4 +35,24 @@ require('lualine').setup()
 --file explorer
 require'nvim-tree'.setup {
 }
+
+--navigation
+require('leap').add_default_mappings()
+
+--autopairs
+require('nvim-autopairs').setup {
+}
+
+--telescope
+require('telescope').setup()
+
+--whichkey
+require('which-key').setup {
+}
+
+--bufferline
+--require('bufferline').setup {
+--}
+
+--colorscheme
 vim.cmd[[colorscheme nord]]
