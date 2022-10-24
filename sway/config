@@ -73,7 +73,7 @@ output HDMI-A-2 pos {
 	input * { 
 		natural_scroll disabled
 		accel_profile "flat"
-		pointer_accel -0.5
+		pointer_accel 0.5
 		xkb_layout us
 		xkb_variant dvorak
 	}
