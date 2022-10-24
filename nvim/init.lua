@@ -54,5 +54,7 @@ require('which-key').setup {
 --require('bufferline').setup {
 --}
 
+--autocomplete/snippets/lsp
+
 --colorscheme
 vim.cmd[[colorscheme nord]]
