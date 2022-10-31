@@ -14,15 +14,11 @@ mod4 + enter
 mod4 + ,
     firefox	
 
-#river controls
+#Wallpaper script
+mod4 + f2
+	/home/emma/.dotfiles/deskwall.sh
 
-#actually mod4 + shift + c
-mod4 + shift + i
-    riverctl close
-
-#actually mod4 + shift + e
-mod4 + shift + d
-    riverctl exit
+#river controls(working on porting to river config)
 
 mod4 + shift + space
     riverctl toggle float
@@ -31,42 +27,13 @@ mod4 + shift + space
 mod4 + y
     riverctl toggle-fullscreen
 
-#actually mod4 + k
-mod4 + v
-    riverctl focus-view previous
-
-#actually mod4 + j
-mod4 + c
-    riverctl focus-view next
-
-#actually mod4 + shift + k
-mod4 + shift + v
-    riverctl swap previous
-
-#actually mod4 + shift + j
-mod4 + shift + c
-    riverctl swap next
-
-#actually mod4 + l
-mod4 + p
-	riverctl focus-output next
-
-#actually mod4 + h
-mod4 + j
-	riverctl focus-output previous
-
-#actually mod4 + shift + l
-mod4 + shift + p
-	riverctl send-to-output next
-
-#actually mod4 + shift + h
-mod4 + shift + j
-	riverctl send-to-output previous
-
 #actually mod4 + shift + r
 mod4 + shift + o
 	@enter resize
 
+
+
+#resize windows
 mode resize
 escape
 	@escape

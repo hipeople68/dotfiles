@@ -48,6 +48,12 @@ require('telescope').setup()
 
 --whichkey
 require('which-key').setup {
+	plugins = {
+		spelling = {
+			enabled=true,
+			suggestions=10,
+		},
+	},
 }
 
 --bufferline

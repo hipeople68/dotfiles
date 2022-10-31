@@ -25,6 +25,7 @@ swww init
 #startup hotkey daemon
 swhks &
 pkexec swhkd &
+source /home/emma/.dotfiles/river/keybinds.sh
 
 #input configuration
 riverctl input pointer-5426-123-Razer_Razer_Viper_Ultimate_Dongle accel-profile flat
