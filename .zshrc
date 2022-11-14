@@ -100,5 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias eka="sl"
+
 eval $(thefuck --alias)
 eval $(starship init zsh)
