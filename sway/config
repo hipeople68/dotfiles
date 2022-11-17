@@ -233,6 +233,8 @@ exec /home/emma/.dotfiles/lapwall.sh
 exec udiskie &
 exec easyeffects -w 
 exec dunst
+exec gnome-keyring-daemon
+exec nm-applet &
 include {
 	/etc/sway/config.d/*
 }
