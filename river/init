@@ -14,6 +14,7 @@ waybar &
 #startup programs
 pipewire &
 wireplumber &
+easyeffects &
 dunst &
 udiskie &
 chronyd &
