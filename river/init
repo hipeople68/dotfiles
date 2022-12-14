@@ -14,18 +14,22 @@ waybar &
 #startup programs
 pipewire &
 wireplumber &
-easyeffects &
+easyeffects --gapplication-service &
 dunst &
 udiskie &
 chronyd &
+
+#protonvpn requirements
+gnome-keyring-daemon --start &
+nm-applet --sm-disable &
 
 #random wallpaper script
 swww init
 /home/emma/.dotfiles/deskwall.sh
 
 #startup hotkey daemon
-swhks &
-pkexec swhkd &
+#swhks &
+#pkexec swhkd &
 source /home/emma/.dotfiles/river/keybinds.sh
 
 #input configuration
@@ -37,6 +41,3 @@ riverctl default-layout rivertile
 riverctl attach-mode bottom
 rivertile -view-padding 4 -outer-padding 4
 
-#protonvpn requirements
-gnome-keyring-daemon
-nm-applet &

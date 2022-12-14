@@ -47,3 +47,15 @@ do
 	#toggle tag of focused view [0-8]
 	riverctl map normal $mod+Shift+Control $i toggle-view-tags $tags
 done
+
+#launch terminal
+riverctl map normal $mod Return spawn kitty
+
+#run menu
+riverctl map normal $mod r spawn "wofi -iS drun"
+
+#web browser
+riverctl map normal $mod w spawn firefox
+
+#wallpaper script
+riverctl map normal $mod f2 spawn "/home/emma/.dotfiles/deskwall.sh"

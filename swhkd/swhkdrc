@@ -1,31 +1,7 @@
 #all binds are converted from dvorak to qwerty
 
-#run menu
-#actually mod4 + r
-mod4 + o
-    wofi -iS drun 
-
-#terminal
-mod4 + enter
-    kitty
-
-#web browser
-#actually mod4 + w
-mod4 + ,
-    firefox	
-
-#Wallpaper script
-mod4 + f2
-	/home/emma/.dotfiles/deskwall.sh
-
 #river controls(working on porting to river config)
 
-mod4 + shift + space
-    riverctl toggle float
-
-#actually mod4 + f
-mod4 + y
-    riverctl toggle-fullscreen
 
 #actually mod4 + shift + r
 mod4 + shift + o
