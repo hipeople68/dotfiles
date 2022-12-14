@@ -103,5 +103,6 @@ source $ZSH/oh-my-zsh.sh
 alias eka="sl"
 alias icat="kitty +kitten icat"
 
-eval $(thefuck --alias)
-eval $(starship init zsh)
+eval "$(thefuck --alias)"
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
