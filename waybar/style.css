@@ -11,6 +11,7 @@ window#waybar {
     color: #ECEFF4;
     transition-property: background-color;
     transition-duration: .5s;
+    opacity: 0.9;
 }
 
 window#waybar.hidden {
