@@ -39,10 +39,6 @@ require'nvim-tree'.setup {
 --navigation
 require('leap').add_default_mappings()
 
---autopairs
-require('nvim-autopairs').setup {
-}
-
 --telescope
 require('telescope').setup()
 
