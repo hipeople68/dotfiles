@@ -32,6 +32,9 @@ require'nvim-treesitter.configs'.setup {
 --status bar
 require('lualine').setup()
 
+--autopairs
+require('nvim-autopairs').setup()
+
 --file explorer
 require'nvim-tree'.setup {
 }
