@@ -8,8 +8,9 @@ hash dbus-update-activation-environment 2>/dev/null && \
 #output manager
 kanshi &
 
-#bar
-waybar &
+#random wallpaper script
+swww init
+/home/emma/.dotfiles/deskwall.sh
 
 #startup programs
 pipewire &
@@ -23,9 +24,8 @@ chronyd &
 gnome-keyring-daemon --start &
 nm-applet --sm-disable &
 
-#random wallpaper script
-swww init
-/home/emma/.dotfiles/deskwall.sh
+#bar
+waybar &
 
 #startup hotkey daemon
 #swhks &
@@ -34,7 +34,12 @@ source /home/emma/.dotfiles/river/keybinds.sh
 
 #input configuration
 riverctl input pointer-5426-123-Razer_Razer_Viper_Ultimate_Dongle accel-profile flat
-riverctl input pointer-5426-123-Razer_Razer_Viper_Ultimate_Dongle pointer-accel -0.5
+riverctl input pointer-5426-123-Razer_Razer_Viper_Ultimate_Dongle pointer-accel -0.8
+
+riverctl input pointer-5426-122-Razer_Razer_Viper_Ultimate accel-profile flat
+riverctl input pointer-5426-122-Razer_Razer_Viper_Ultimate pointer-accel -0.8
+
+riverctl keyboard-layout -options ctrl:swapcaps dvorak
 
 #tiling daemon
 riverctl default-layout rivertile

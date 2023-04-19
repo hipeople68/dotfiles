@@ -32,16 +32,15 @@ require'nvim-treesitter.configs'.setup {
 --status bar
 require('lualine').setup()
 
+--autopairs
+require('nvim-autopairs').setup()
+
 --file explorer
 require'nvim-tree'.setup {
 }
 
 --navigation
 require('leap').add_default_mappings()
-
---autopairs
-require('nvim-autopairs').setup {
-}
 
 --telescope
 require('telescope').setup()
