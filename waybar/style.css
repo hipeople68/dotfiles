@@ -11,11 +11,13 @@ window#waybar {
     color: #ECEFF4;
     transition-property: background-color;
     transition-duration: .5s;
-    opacity: 0.9;
+    /*opacity: 0.9;*/
+    opacity: 1;
 }
 
 window#waybar.hidden {
-    opacity: 0.2;
+    /*opacity: 0.2;*/
+    opacity: 1;
 }
 
 /*
