@@ -4,7 +4,7 @@ return require('packer').startup(function()
 	use {'wbthomason/packer.nvim', opt = true}
 
 	-- Color scheme
-	use 'shaunsingh/nord.nvim'
+	use {'catppuccin/nvim', as = 'catppuccin'}
 
 	--treesitter
 	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }

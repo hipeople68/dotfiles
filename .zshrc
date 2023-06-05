@@ -64,13 +64,14 @@ zstyle ':omz:update' frequency 13
 
 # Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM=/home/emma/.dotfiles/custom
+source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git extract zsh-syntax-highlighting thefuck zoxide tmux)
 
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 source $ZSH/oh-my-zsh.sh
@@ -109,9 +110,8 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias eka="sl"
 alias icat="kitty +kitten icat"
 
-eval "$(thefuck --alias)"
+#eval "$(thefuck --alias)"
 eval "$(starship init zsh)"
-eval "$(zoxide init zsh)"
+#eval "$(zoxide init zsh)"

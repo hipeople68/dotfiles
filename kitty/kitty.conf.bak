@@ -5,9 +5,3 @@ bold_italic_font	auto
 
 font_size		12.00
 font_weight		500
-
-
-# BEGIN_KITTY_THEME
-# Catppuccin-Mocha
-include current-theme.conf
-# END_KITTY_THEME

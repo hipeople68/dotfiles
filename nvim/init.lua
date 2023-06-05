@@ -60,4 +60,15 @@ require('which-key').setup {
 --}
 
 --colorscheme
-vim.cmd[[colorscheme nord]]
+require('catppuccin').setup({
+	flavour = 'mocha',
+	intergrations = {
+		treesitter = true,
+		lualine = true,
+		nvimtree = true,
+		leap = true,
+		telescope = true,
+		which_key = true,
+	}
+})
+vim.cmd[[colorscheme catppuccin]]
