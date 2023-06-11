@@ -1,0 +1,14 @@
+{
+    "input": {
+        "blocklist": [],
+        "plugins_order": [
+            "rnnoise#0"
+        ],
+        "rnnoise#0": {
+            "bypass": false,
+            "input-gain": 0.0,
+            "model-path": "",
+            "output-gain": 0.0
+        }
+    }
+}
