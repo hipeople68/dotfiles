@@ -58,4 +58,6 @@ riverctl map normal $mod r spawn "wofi --show drun"
 riverctl map normal $mod w spawn firefox
 
 #wallpaper script
-riverctl map normal $mod f2 spawn "/home/emma/.dotfiles/deskwall.sh"
+riverctl map normal $mod f2 spawn "/home/emma/.dotfiles/lapwall.sh"
+
+riverctl declare-mode resize
