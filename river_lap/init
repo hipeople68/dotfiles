@@ -1,0 +1,47 @@
+#!/bin/sh
+
+#fix for slow app launching
+systemctl --user import-environment DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+hash dbus-update-activation-environment 2>/dev/null && \
+	dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+
+#output manager
+kanshi &
+
+#random wallpaper script
+swww init
+/home/emma/.dotfiles/deskwall.sh
+
+#startup programs
+pipewire &
+wireplumber &
+easyeffects --gapplication-service &
+dunst &
+udiskie &
+chronyd &
+
+#protonvpn requirements
+gnome-keyring-daemon --start &
+nm-applet --sm-disable &
+#bar
+waybar &
+
+#startup hotkey daemon
+#swhks &
+#pkexec swhkd &
+source /home/emma/.dotfiles/river/keybinds.sh
+
+#input configuration
+riverctl input pointer-5426-123-Razer_Razer_Viper_Ultimate_Dongle accel-profile flat
+riverctl input pointer-5426-123-Razer_Razer_Viper_Ultimate_Dongle pointer-accel -0.8
+
+riverctl input pointer-5426-122-Razer_Razer_Viper_Ultimate accel-profile flat
+riverctl input pointer-5426-122-Razer_Razer_Viper_Ultimate pointer-accel -0.8
+
+riverctl keyboard-layout -options ctrl:swapcaps -variant dvorak us
+
+#tiling daemon
+riverctl default-layout rivertile
+riverctl attach-mode bottom
+rivertile -view-padding 4 -outer-padding 4
+
