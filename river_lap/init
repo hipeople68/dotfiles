@@ -10,7 +10,7 @@ kanshi &
 
 #random wallpaper script
 swww init
-/home/emma/.dotfiles/deskwall.sh
+/home/emma/.dotfiles/lapwall.sh
 
 #startup programs
 pipewire &
@@ -32,12 +32,6 @@ waybar &
 source /home/emma/.dotfiles/river/keybinds.sh
 
 #input configuration
-riverctl input pointer-5426-123-Razer_Razer_Viper_Ultimate_Dongle accel-profile flat
-riverctl input pointer-5426-123-Razer_Razer_Viper_Ultimate_Dongle pointer-accel -0.8
-
-riverctl input pointer-5426-122-Razer_Razer_Viper_Ultimate accel-profile flat
-riverctl input pointer-5426-122-Razer_Razer_Viper_Ultimate pointer-accel -0.8
-
 riverctl keyboard-layout -options ctrl:swapcaps -variant dvorak us
 
 #tiling daemon
