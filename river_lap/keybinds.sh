@@ -52,7 +52,7 @@ done
 riverctl map normal $mod Return spawn kitty
 
 #run menu
-riverctl map normal $mod r spawn "wofi -iS drun"
+riverctl map normal $mod r spawn "wofi --show drun"
 
 #web browser
 riverctl map normal $mod w spawn firefox

@@ -13,8 +13,6 @@ swww init
 /home/emma/.dotfiles/deskwall.sh
 
 #startup programs
-pipewire &
-wireplumber &
 easyeffects --gapplication-service &
 dunst &
 udiskie &
@@ -39,6 +37,12 @@ riverctl input pointer-5426-122-Razer_Razer_Viper_Ultimate accel-profile flat
 riverctl input pointer-5426-122-Razer_Razer_Viper_Ultimate pointer-accel -0.8
 
 riverctl keyboard-layout -options ctrl:swapcaps -variant dvorak us
+
+#window rules
+riverctl rule-add csd -app-id "bar"
+
+#colours
+source /home/emma/.dotfiles/river/mocha.conf
 
 #tiling daemon
 riverctl default-layout rivertile
