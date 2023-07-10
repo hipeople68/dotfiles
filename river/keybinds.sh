@@ -31,6 +31,54 @@ riverctl map normal $mod+Shift Space toggle-float
 # Toggle fullscreen
 riverctl map normal $mod F toggle-fullscreen
 
+#launch terminal
+riverctl map normal $mod Return spawn kitty
+
+#run menu
+riverctl map normal $mod r spawn "wofi --show drun"
+
+#web browser
+riverctl map normal $mod w spawn firefox
+
+riverctl declare-mode resize
+riverctl map normal $mod+Shift r enter-mode resize
+riverctl map resize None escape enter-mode normal
+
+#wallpaper script
+riverctl map resize $mod w spawn "/home/emma/.dotfiles/deskwall.sh"
+
+# $mod+H and $mod+L to decrease/increase the main ratio of rivertile(1)
+riverctl map resize $mod H send-layout-cmd rivertile "main-ratio -0.05"
+riverctl map resize $mod L send-layout-cmd rivertile "main-ratio +0.05"
+
+# $mod+Shift+H and $mod+Shift+L to increment/decrement the main count of rivertile(1)
+riverctl map resize $mod+Control+Shift H send-layout-cmd rivertile "main-count +1"
+riverctl map resize $mod+Control+Shift L send-layout-cmd rivertile "main-count -1"
+
+# $mod+Alt+{H,J,K,L} to move views
+riverctl map resize $mod+Control H move left 100
+riverctl map resize $mod+Control J move down 100
+riverctl map resize $mod+Control K move up 100
+riverctl map resize $mod+Control L move right 100
+
+# $mod+Alt+Control+{H,J,K,L} to snap views to screen edges
+riverctl map resize $mod+Alt+Control H snap left
+riverctl map resize $mod+Alt+Control J snap down
+riverctl map resize $mod+Alt+Control K snap up
+riverctl map resize $mod+Alt+Control L snap right
+
+# $mod+Alt+Shift+{H,J,K,L} to resize views
+riverctl map resize $mod+Shift H resize horizontal -100
+riverctl map resize $mod+Shift J resize vertical 100
+riverctl map resize $mod+Shift K resize vertical -100
+riverctl map resize $mod+Shift L resize horizontal 100
+
+# $mod + Left Mouse Button to move views
+riverctl map-pointer resize $mod BTN_LEFT move-view
+
+# $mod + Right Mouse Button to resize views
+riverctl map-pointer resize $mod BTN_RIGHT resize-view
+
 for i in $(seq 1 9)
 do
 	tags=$((1 << ($i - 1)))
@@ -48,14 +96,3 @@ do
 	riverctl map normal $mod+Shift+Control $i toggle-view-tags $tags
 done
 
-#launch terminal
-riverctl map normal $mod Return spawn kitty
-
-#run menu
-riverctl map normal $mod r spawn "wofi -iS drun"
-
-#web browser
-riverctl map normal $mod w spawn firefox
-
-#wallpaper script
-riverctl map normal $mod f2 spawn "/home/emma/.dotfiles/deskwall.sh"
