@@ -22,6 +22,11 @@ dunst &
 udiskie &
 chronyd &
 
+#startup hotkey daemon
+#swhks &
+#pkexec swhkd &
+source /home/emma/.dotfiles/river_lap/keybinds.sh
+
 #protonvpn requirements
 gnome-keyring-daemon --start &
 nm-applet --sm-disable &
@@ -44,7 +49,7 @@ riverctl rule-add csd -app-id "bar"
 source /home/emma/.dotfiles/river_lap/mocha.conf
 
 riverctl background-color $base
-riverctl border-color-unfocused $crust
+riverctl border-color-unfocused $mantle
 riverctl border-color-focused $teal
 riverctl border-color-urgent $teal
 riverctl border-width 2
@@ -53,4 +58,3 @@ riverctl border-width 2
 riverctl default-layout rivertile
 riverctl attach-mode bottom
 rivertile -view-padding 4 -outer-padding 4
-
