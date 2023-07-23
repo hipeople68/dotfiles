@@ -1,9 +1,11 @@
 #!/bin/sh
 
 #fix for slow app launching
-systemctl --user import-environment DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-hash dbus-update-activation-environment 2>/dev/null && \
-	dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+#systemctl --user import-environment DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+#hash dbus-update-activation-environment 2>/dev/null && \
+#	dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+
+dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 
 #output manager
 kanshi &
@@ -45,12 +47,12 @@ riverctl rule-add csd -app-id "bar"
 source /home/emma/.dotfiles/river/mocha.conf
 
 riverctl background-color $base
-riverctl border-color-unfocused $crust
 riverctl border-color-focused $teal
-riverctl border-color-urgent $teal
+riverctl border-color-unfocused $mauve
+riverctl border-color-urgent $red
 riverctl border-width 2
 
 #tiling daemon
 riverctl default-layout rivertile
 riverctl attach-mode bottom
-rivertile -view-padding 4 -outer-padding 4
+rivertile -view-padding 2 -outer-padding 2

@@ -1,13 +1,13 @@
 {
      "layer": "top", // Waybar at top layer
      "position": "top", // Waybar position (top|bottom|left|right)
-     "height": 10, // Waybar height (to be removed for auto height)
+     "height": 24, // Waybar height (to be removed for auto height)
     //"width": 1280, // Waybar width
     "spacing": 2, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["custom/media", "river/tags"],
-    "modules-center": [""],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "backlight", "battery", "clock", "tray"],
+    "modules-left": ["custom/media","river/mode", "clock"],
+    "modules-center": ["river/tags"],
+    "modules-right": ["pulseaudio", "network", "cpu", "memory", "backlight", "battery", "tray"],
     //Modules configuration
 
     "tray": {

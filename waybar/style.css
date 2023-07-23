@@ -1,19 +1,25 @@
 @import "mocha.css";
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Iosevka, sans-serif;
-    font-size: 11px;
+    font-family: Iosevka, FontAwesome;
+    font-size: 12px;
     font-weight: 500;
+    box-shadow: inset 0 -3px transparent;
+    border: none;
+    border-radius: 3;
+    margin-top: 1px;
+    margin-bottom: 0px;
+    margin-left: 1px;
+    margin-right: 1px;
 }
 
 window#waybar {
-    background-color: @base;
-    border-bottom: 3px solid @surface0;
+    background-color: transparent;
     color: @text;
     transition-property: background-color;
     transition-duration: .5s;
     /*opacity: 0.9;*/
-    opacity: 1;
+    /*opacity: 1;*/
 }
 
 window#waybar.hidden {
@@ -36,28 +42,32 @@ window#waybar.termite {
 
 window#waybar.chromium {
     background-color: @crust;
-    border: none;
 }
 
+#tags button {
+    padding: 0px 5px;
+    background-color: @mantle;
+    color: @text;
+}
+
+#tags button.focused {
+	color: @rosewater;
+	border-top: 2px solid @rosewater;
+	border-bottom: 2px solid @rosewater;
+}
 #workspaces button {
     padding: 0 5px;
     background-color: @base;
     color: @text;
-    /* Use box-shadow instead of border so the text isn't offset */
-    box-shadow: inset 0 -3px transparent;
-    /* Avoid rounded borders under each workspace name */
-    border-bottom: 3px solid @surface0;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button:hover {
     background: @surface1;
-    box-shadow: inset 0 -3px @text;
 }
 
 #workspaces button.focused {
     background-color: @mantle;
-    box-shadow: inset 0 -3px @overlay2;
 }
 
 #workspaces button.urgent {
@@ -65,8 +75,8 @@ window#waybar.chromium {
 }
 
 #mode {
-    background-color: @blue;
-    border-bottom: 3px solid @surface2;
+    background-color: @mauve;
+    color: @mantle;
 }
 
 #clock,
@@ -85,7 +95,6 @@ window#waybar.chromium {
 
 #window,
 #workspaces {
-    margin: 0 4px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -96,9 +105,6 @@ window#waybar.chromium {
 /* If workspaces is the rightmost module, omit right margin */
 .modules-right > widget:last-child > #workspaces {
     margin-right: 0;
-}
-
-#tags {
 }
 
 #clock {
@@ -250,7 +256,6 @@ label:focus {
     background: @blue;
     color: @crust;
     padding: 0 2px 0 2px;
-    margin: 0 5px;
     min-width: 16px;
 }
 
@@ -258,7 +263,6 @@ label:focus {
     background: @blue;
     color: @crust;
     padding: 0 2px 0 2px;
-    margin: 0 5px;
     min-width: 16px;
 }
 
