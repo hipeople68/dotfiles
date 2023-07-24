@@ -46,7 +46,7 @@ riverctl keyboard-layout -options ctrl:swapcaps -variant dvorak us
 riverctl rule-add csd -app-id "bar"
 
 #colours
-source /home/emma/.dotfiles/river_lap/mocha.conf
+source /home/emma/.dotfiles/river/mocha.conf
 
 riverctl background-color $base
 riverctl border-color-unfocused $mantle
