@@ -73,6 +73,11 @@ riverctl map resize $mod+Shift J resize vertical 100
 riverctl map resize $mod+Shift K resize vertical -100
 riverctl map resize $mod+Shift L resize horizontal 100
 
+# screenshot
+riverctl map normal $mod S spawn "grim -o DP-1 $HOME/Pictures/$(date '+%y%m%d_%H-%M-%S').png"
+riverctl map normal $mod+Shift S spawn "slurp | grim -g - $HOME/Pictures/$(date '+%y%m%d_%H-%M-%S').png"
+riverctl map normal $mod+Control S spawn "grim $HOME/Pictures/$(date '+%y%m%d_%H-%M-%S').png"
+
 # $mod + Left Mouse Button to move views
 riverctl map-pointer resize $mod BTN_LEFT move-view
 

@@ -8,17 +8,18 @@
 dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 
 #output manager
-kanshi &
-
-#random wallpaper script
-swww init
-/home/emma/.dotfiles/deskwall.sh
+#kanshi &
+way-displays > /tmp/way-displays.${XDG_VTNR}.${USER}.log 2>&1 &
 
 #startup programs
 easyeffects --gapplication-service &
 dunst &
 udiskie &
 chronyd &
+
+#random wallpaper script
+swww init
+/home/emma/.dotfiles/deskwall.sh
 
 #protonvpn requirements
 gnome-keyring-daemon --start &
@@ -56,3 +57,4 @@ riverctl border-width 2
 riverctl default-layout rivertile
 riverctl attach-mode bottom
 rivertile -view-padding 2 -outer-padding 2
+

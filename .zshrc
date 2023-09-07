@@ -111,6 +111,7 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias icat="kitty +kitten icat"
+alias bookmus="CMUS_HOME=/home/emma/Audiobooks cmus"
 
 #eval "$(thefuck --alias)"
 eval "$(starship init zsh)"
