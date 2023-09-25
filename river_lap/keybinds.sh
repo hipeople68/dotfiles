@@ -44,6 +44,11 @@ riverctl declare-mode resize
 riverctl map normal $mod+Shift r enter-mode resize
 riverctl map resize None escape enter-mode normal
 
+# screenshot
+riverctl map normal $mod S spawn "grim -o DP-1 $HOME/Pictures/$(date '+%y%m%d_%H-%M-%S').png"
+riverctl map normal $mod+Shift S spawn "slurp | grim -g - $HOME/Pictures/$(date '+%y%m%d_%H-%M-%S').png"
+riverctl map normal $mod+Control S spawn "grim $HOME/Pictures/$(date '+%y%m%d_%H-%M-%S').png"
+
 #wallpaper script
 riverctl map resize $mod w spawn "/home/emma/.dotfiles/lapwall.sh"
 
