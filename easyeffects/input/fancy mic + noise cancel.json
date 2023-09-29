@@ -31,13 +31,17 @@
             "wet": 0.0
         },
         "filter#0": {
+            "balance": 0.0,
             "bypass": false,
-            "frequency": 150.0,
-            "inertia": 20.0,
+            "frequency": 50.0,
+            "gain": 0.0,
             "input-gain": 0.0,
-            "mode": "12dB/oct Highpass",
+            "mode": "RLC (BT)",
             "output-gain": 0.0,
-            "resonance": -3.0
+            "quality": 0.0,
+            "slope": "x1",
+            "type": "High-pass",
+            "width": 4.0
         },
         "gate#0": {
             "attack": 5.0,
@@ -96,9 +100,13 @@
         ],
         "rnnoise#0": {
             "bypass": false,
+            "enable-vad": false,
             "input-gain": 0.0,
             "model-path": "",
-            "output-gain": 0.0
+            "output-gain": 0.0,
+            "release": 20.0,
+            "vad-thres": 50.0,
+            "wet": 0.0
         }
     }
 }
