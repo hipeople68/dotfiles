@@ -20,8 +20,6 @@ opt.number = true
 opt.tgc = true
 opt.termguicolors = true
 
-opt.tabstop = 4
-
 --Treesitter
 require'nvim-treesitter.configs'.setup {
 	ensure_installed = "all",
