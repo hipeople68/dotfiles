@@ -1,55 +1,45 @@
-return require('packer').startup(function()
-    
-	-- Packer can manage itself as an optional plugin
-	use {'wbthomason/packer.nvim', opt = true}
+return {
+	{
+	  "folke/which-key.nvim",
+	  event = "VeryLazy",
+	  init = function()
+	    vim.o.timeout = true
+	    vim.o.timeoutlen = 300
+	  end,
+	  opts = {
+	    -- your configuration comes here
+	    -- or leave it empty to use the default settings
+	    -- refer to the configuration section below
+	  }
+	},
 
-	-- Color scheme
-	use {'catppuccin/nvim', as = 'catppuccin'}
+	{
+	  "nvim-tree/nvim-tree.lua",
+	  version = "*",
+	  lazy = false,
+	  dependencies = {
+	    "nvim-tree/nvim-web-devicons",
+	  },
+	  config = function()
+	    require("nvim-tree").setup {}
+	  end,
+	},
+	{
+	    'nvim-telescope/telescope.nvim', tag = '0.1.3',
+		--or                              , branch = '0.1.x',
+	      dependencies = { 'nvim-lua/plenary.nvim' }
+	},
+	{
+	  'nvim-lualine/lualine.nvim',
+	  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+	},
+	{
+	    'windwp/nvim-autopairs',
+	    event = "InsertEnter",
+	    opts = {} -- this is equalent to setup({}) function
+	},
+	{
+		"catppuccin/nvim", name = "catppuccin", priority = 1000 
+	},
+}
 
-	--treesitter
-	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-	
-	--status bar
-	use { 'nvim-lualine/lualine.nvim', 
-		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-	}
-
-	--navigation
-	use {
-		'ggandor/leap.nvim',
-		requires = { {'tpope/vim-repeat'} }
-	}
-
-	--file tree
-	use {'kyazdani42/nvim-tree.lua', 
-		requires = { 'kyazdani42/nvim-web-devicons', opt = true },
-		tag = 'nightly' 
-	}
-	
-	--autopairs
-	use {
-		"windwp/nvim-autopairs",
-		--config = function() require("nvim-autopairs").setup {} end
-	}
-
-	--telescope
-	use {
-		'nvim-telescope/telescope.nvim', branch = '0.1.x',
-		  requires = { {'nvim-lua/plenary.nvim'} }
-	}
-
-	--whichkey
-	use {
-		'folke/which-key.nvim'
-	}
-
-	--bufferline
-	--use {
-	--	'akinsho/bufferline.nvim',tag = "v3.*", 
-	--	requires = 'kyazdani42/nvim-web-devicons'
-	--}
-	
-	--completion and snippets
-	--remember to work on this
-	use 'neovim/nvim-lspconfig'
-end)
