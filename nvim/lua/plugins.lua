@@ -31,7 +31,7 @@ return {
 	},
 	{
 	  'nvim-lualine/lualine.nvim',
-	  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+		dependencies = {"nvim-tree/nvim-web-devicons"}
 	},
 	{
 	    'windwp/nvim-autopairs',
@@ -41,5 +41,26 @@ return {
 	{
 		"catppuccin/nvim", name = "catppuccin", priority = 1000 
 	},
+	{
+		"nvim-treesitter/nvim-treesitter", build = ":TSUpdate",
+		config = function () 
+		      local configs = require("nvim-treesitter.configs")
+
+		configs.setup({
+			ensure_installed = {"python", "rust", "lua", "vim", "vimdoc", "c", "query", "java", "latex"},
+			sync_install = false,
+			highlight = { enable = true },
+			indent = { enable = true },
+		})
+	end,
+	},
+	{
+		"neovim/nvim-lspconfig"
+	},
+	{
+		"ggandor/leap.nvim",
+		lazy = false,
+	}
+
 }
 
