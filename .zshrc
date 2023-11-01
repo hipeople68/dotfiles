@@ -113,6 +113,9 @@ fi
 alias icat="kitty +kitten icat"
 alias bookmus="CMUS_HOME=/home/emma/Audiobooks cmus"
 
+alias javac-fx="javac --module-path /usr/lib/jvm/java-17-openjdk/lib --add-modules javafx.controls,javafx.fxml "
+alias java-fx="java --module-path /usr/lib/jvm/java-17-openjdk/lib --add-modules javafx.controls,javafx.fxml"
+
 #eval "$(thefuck --alias)"
 eval "$(starship init zsh)"
 #eval "$(zoxide init zsh)"

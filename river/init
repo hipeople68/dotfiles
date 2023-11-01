@@ -39,7 +39,7 @@ riverctl input pointer-5426-123-Razer_Razer_Viper_Ultimate_Dongle pointer-accel 
 riverctl input pointer-5426-122-Razer_Razer_Viper_Ultimate accel-profile flat
 riverctl input pointer-5426-122-Razer_Razer_Viper_Ultimate pointer-accel -0.8
 
-riverctl keyboard-layout -options ctrl:swapcaps -variant dvorak us
+riverctl keyboard-layout -variant "dvorak" us
 
 #window rules
 riverctl rule-add csd -app-id "bar"
