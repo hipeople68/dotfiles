@@ -2,6 +2,11 @@
 autoload -Uz compinit
 compinit
 
+#history
+HISTSIZE=1000
+SAVEHIST=1000
+HISTFILE=~/.zsh_history
+
 # Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='nvim'
