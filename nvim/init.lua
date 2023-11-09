@@ -20,10 +20,11 @@ vim.opt.rtp:prepend(lazypath)
 require('plugins')
 
 --options
-opt.linebreak = true
-opt.number = true
-opt.tgc = true
-opt.termguicolors = true
+opt.linebreak=true
+opt.number=true
+opt.tgc=true
+opt.termguicolors=true
+opt.tabstop=4
 
 --lazy.nvim
 require("lazy").setup("plugins")
