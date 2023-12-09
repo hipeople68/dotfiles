@@ -71,7 +71,7 @@ source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git extract thefuck zoxide tmux)
+plugins=(git extract thefuck zoxide)
 
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 source $ZSH/oh-my-zsh.sh
