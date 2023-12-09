@@ -39,6 +39,7 @@ riverctl map normal $mod r spawn "wofi --show drun"
 
 #web browser
 riverctl map normal $mod w spawn firefox
+riverctl map normal $mod+Shift w spawn "firefox --private-window"
 
 riverctl declare-mode resize
 riverctl map normal $mod+Shift r enter-mode resize
