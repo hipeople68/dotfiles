@@ -116,8 +116,8 @@ fi
 alias icat="kitty +kitten icat"
 alias bookmus="CMUS_HOME=/home/emma/Audiobooks cmus"
 
-alias javac-fx="javac --module-path /usr/lib/jvm/java-17-openjdk/lib/javafx.base.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx.controls.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx-swt.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx.fxml.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx.graphics.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx.swing.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx.web.jar: --add-modules javafx.controls,javafx.fxml "
-alias java-fx="java --module-path /usr/lib/jvm/java-17-openjdk/lib/javafx.base.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx.controls.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx-swt.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx.fxml.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx.graphics.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx.swing.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx.web.jar: --add-modules javafx.controls,javafx.fxml "
+alias javac-fx="javac --module-path /usr/lib/jvm/java-21-openjfx/lib --add-modules javafx.controls,javafx.fxml "
+alias java-fx="java --module-path /usr/lib/jvm/java-21-openjfx/lib --add-modules javafx.controls,javafx.fxml "
 
 #eval "$(thefuck --alias)"
 eval "$(starship init zsh)"

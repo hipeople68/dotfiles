@@ -10,6 +10,9 @@ dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 #output manager
 way-displays > /tmp/way-displays.${XDG_VTNR}.${USER}.log 2>&1 &
 
+#polkit
+/usr/lib/polkit-kde-authentication-agent-1 &
+
 #random wallpaper script
 swww init
 /home/emma/.dotfiles/lapwall.sh
