@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["custom/media","river/mode", "clock"],
     "modules-center": ["river/tags"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "backlight", "battery", "tray"],
+    "modules-right": ["pulseaudio", "network", "cpu", "memory", "backlight", "battery", "custom/dunst", "tray"],
     //Modules configuration
 
     "tray": {
@@ -78,5 +78,11 @@
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    },
+    "custom/dunst": {
+		"format": "{}",
+		"exec": "~/.config/waybar/scripts/dunst.sh",
+		"on-click": "dunstctl set-paused toggle",
+		"restart-interval": 2,
     }
 }

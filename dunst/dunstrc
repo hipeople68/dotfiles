@@ -14,3 +14,7 @@ foreground = "#CDD6F4"
 background = "#1E1E2E"
 foreground = "#CDD6F4"
 frame_color = "#FAB387"
+
+[play_sound]
+		summary = "*"
+		script = /home/emma/.dotfiles/dunst/alerts/alert.sh
