@@ -25,6 +25,7 @@ opt.number=true
 opt.tgc=true
 opt.termguicolors=true
 opt.tabstop=4
+opt.shiftwidth=4
 
 --lazy.nvim
 require("lazy").setup("plugins")
