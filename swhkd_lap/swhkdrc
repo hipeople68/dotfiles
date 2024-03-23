@@ -1,0 +1,167 @@
+#annoyingly, swhkd doesn't support keyboard layouts :(
+#(I may try to implement this myself)
+
+#focus tags [0-8]
+super + 1 
+	riverctl set-focused-tags $((1 << 0))
+super + 2 
+	riverctl set-focused-tags $((1 << 1))
+super + 3 
+	riverctl set-focused-tags $((1 << 2))
+super + 4 
+	riverctl set-focused-tags $((1 << 3))
+super + 5 
+	riverctl set-focused-tags $((1 << 4))
+super + 6 
+	riverctl set-focused-tags $((1 << 5))
+super + 7 
+	riverctl set-focused-tags $((1 << 6))
+super + 8 
+	riverctl set-focused-tags $((1 << 7))
+super + 9 
+	riverctl set-focused-tags $((1 << 8))
+
+#tag focused view [0-8]
+super + shift + 1 
+	riverctl set-view-tags $((1 << 0))
+super + shift + 2 
+	riverctl set-view-tags $((1 << 1))
+super + shift + 3 
+	riverctl set-view-tags $((1 << 2))
+super + shift + 4 
+	riverctl set-view-tags $((1 << 3))
+super + shift + 5 
+	riverctl set-view-tags $((1 << 4))
+super + shift + 6 
+	riverctl set-view-tags $((1 << 5))
+super + shift + 7 
+	riverctl set-view-tags $((1 << 6))
+super + shift + 8 
+	riverctl set-view-tags $((1 << 7))
+super + shift + 9 
+	riverctl set-view-tags $((1 << 8))
+
+#toggle focus of a tag [0-8]
+super + control + 1 
+	riverctl toggle-focused-tags $((1 << 0))
+super + control + 2 
+	riverctl toggle-focused-tags $((1 << 1))
+super + control + 3 
+	riverctl toggle-focused-tags $((1 << 2))
+super + control + 4 
+	riverctl toggle-focused-tags $((1 << 3))
+super + control + 5 
+	riverctl toggle-focused-tags $((1 << 4))
+super + control + 6 
+	riverctl toggle-focused-tags $((1 << 5))
+super + control + 7 
+	riverctl toggle-focused-tags $((1 << 6))
+super + control + 8 
+	riverctl toggle-focused-tags $((1 << 7))
+super + control + 9 
+	riverctl toggle-focused-tags $((1 << 8))
+
+#toggle tag of focused view [0-8]
+super + shift + control + 1 
+	riverctl toggle-view-tags $((1 << 0))
+super + shift + control + 2 
+	riverctl toggle-view-tags $((1 << 1))
+super + shift + control + 3 
+	riverctl toggle-view-tags $((1 << 2))
+super + shift + control + 4 
+	riverctl toggle-view-tags $((1 << 3))
+super + shift + control + 5 
+	riverctl toggle-view-tags $((1 << 4))
+super + shift + control + 6 
+	riverctl toggle-view-tags $((1 << 5))
+super + shift + control + 7 
+	riverctl toggle-view-tags $((1 << 6))
+super + shift + control + 8 
+	riverctl toggle-view-tags $((1 << 7))
+super + shift + control + 9 
+	riverctl toggle-view-tags $((1 << 8))
+
+## close focused view
+#riverctl map normal $mod+Shift C close
+#
+## exit river
+#riverctl map normal $mod+Shift E exit
+#
+## Navigate stack
+#riverctl map normal $mod J focus-view next
+#riverctl map normal $mod K focus-view previous
+#
+## Swap views in stack
+#riverctl map normal $mod+Shift J swap next
+#riverctl map normal $mod+Shift K swap previous
+#
+## Focus other outputs
+#riverctl map normal $mod H focus-output previous
+#riverctl map normal $mod L focus-output next
+#
+## Move views to other outputs
+#riverctl map normal $mod+Shift H send-to-output previous
+#riverctl map normal $mod+Shift L send-to-output next
+#
+## Move focused view to the top of the layout stack
+#riverctl map normal $mod+Shift+Return zoom
+#
+## Toggle floating
+#riverctl map normal $mod+Shift Space toggle-float
+#
+## Toggle fullscreen
+#riverctl map normal $mod F toggle-fullscreen
+#
+##launch terminal
+#riverctl map normal $mod Return spawn kitty
+#
+##run menu
+#riverctl map normal $mod r spawn "wofi --show drun"
+#
+##web browser
+#riverctl map normal $mod w spawn firefox
+#riverctl map normal $mod+Shift w spawn "firefox --private-window"
+#
+#riverctl declare-mode resize
+#riverctl map normal $mod+Shift r enter-mode resize
+#riverctl map resize None escape enter-mode normal
+#
+##wallpaper script
+#riverctl map resize $mod w spawn "/home/emma/.dotfiles/changedeskwall.sh"
+#
+## $mod+H and $mod+L to decrease/increase the main ratio of rivertile(1)
+#riverctl map resize $mod H send-layout-cmd rivertile "main-ratio -0.05"
+#riverctl map resize $mod L send-layout-cmd rivertile "main-ratio +0.05"
+#
+## $mod+Shift+H and $mod+Shift+L to increment/decrement the main count of rivertile(1)
+#riverctl map resize $mod+Control+Shift H send-layout-cmd rivertile "main-count +1"
+#riverctl map resize $mod+Control+Shift L send-layout-cmd rivertile "main-count -1"
+#
+## $mod+Alt+{H,J,K,L} to move views
+#riverctl map resize $mod+Control H move left 100
+#riverctl map resize $mod+Control J move down 100
+#riverctl map resize $mod+Control K move up 100
+#riverctl map resize $mod+Control L move right 100
+#
+## $mod+Alt+Control+{H,J,K,L} to snap views to screen edges
+#riverctl map resize $mod+Alt+Control H snap left
+#riverctl map resize $mod+Alt+Control J snap down
+#riverctl map resize $mod+Alt+Control K snap up
+#riverctl map resize $mod+Alt+Control L snap right
+#
+## $mod+Alt+Shift+{H,J,K,L} to resize views
+#riverctl map resize $mod+Shift H resize horizontal -100
+#riverctl map resize $mod+Shift J resize vertical 100
+#riverctl map resize $mod+Shift K resize vertical -100
+#riverctl map resize $mod+Shift L resize horizontal 100
+#
+## screenshot
+#riverctl map normal $mod S spawn "grim -o DP-1 $HOME/Pictures/$(date '+%y%m%d_%H-%M-%S').png"
+#riverctl map normal $mod+Shift S spawn "slurp | grim -g - $HOME/Pictures/$(date '+%y%m%d_%H-%M-%S').png"
+#riverctl map normal $mod+Control S spawn "grim $HOME/Pictures/$(date '+%y%m%d_%H-%M-%S').png"
+#
+## $mod + Left Mouse Button to move views
+#riverctl map-pointer resize $mod BTN_LEFT move-view
+#
+## $mod + Right Mouse Button to resize views
+#riverctl map-pointer resize $mod BTN_RIGHT resize-view
