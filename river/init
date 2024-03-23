@@ -27,10 +27,6 @@ nm-applet --sm-disable &
 #bar
 waybar &
 
-#startup hotkey daemon
-#swhks &
-#pkexec swhkd &
-source /home/emma/.dotfiles/river/keybinds.sh
 
 #input configuration
 riverctl input pointer-5426-123-Razer_Razer_Viper_Ultimate_Dongle accel-profile flat
@@ -39,7 +35,12 @@ riverctl input pointer-5426-123-Razer_Razer_Viper_Ultimate_Dongle pointer-accel 
 riverctl input pointer-5426-122-Razer_Razer_Viper_Ultimate accel-profile flat
 riverctl input pointer-5426-122-Razer_Razer_Viper_Ultimate pointer-accel -0.8
 
-riverctl keyboard-layout -variant "dvorak" us
+riverctl keyboard-layout -variant dvp us
+
+#startup hotkey daemon
+swhks &
+pkexec swhkd &
+source /home/emma/.dotfiles/river/keybinds.sh
 
 #window rules
 riverctl rule-add csd -app-id "bar"
