@@ -46,7 +46,7 @@ riverctl map normal $mod+Shift r enter-mode resize
 riverctl map resize None escape enter-mode normal
 
 #wallpaper script
-riverctl map resize $mod w spawn "/home/emma/.dotfiles/deskwall.sh"
+riverctl map resize $mod w spawn "/home/emma/.dotfiles/changedeskwall.sh"
 
 # $mod+H and $mod+L to decrease/increase the main ratio of rivertile(1)
 riverctl map resize $mod H send-layout-cmd rivertile "main-ratio -0.05"

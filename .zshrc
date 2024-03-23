@@ -116,6 +116,7 @@ fi
 alias icat="kitty +kitten icat"
 alias bookmus="CMUS_HOME=/home/emma/Audiobooks cmus"
 alias scratchpad="nvim /home/emma/Documents/scratchpad"
+alias rsync="rsync --progress"
 
 alias javac-fx="javac --module-path /usr/lib/jvm/java-21-openjfx/lib --add-modules javafx.controls,javafx.fxml "
 alias java-fx="java --module-path /usr/lib/jvm/java-21-openjfx/lib --add-modules javafx.controls,javafx.fxml "
