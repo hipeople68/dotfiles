@@ -38,7 +38,7 @@ waybar &
 source /home/emma/.dotfiles/river_lap/keybinds.sh
 
 #input configuration
-riverctl keyboard-layout -options ctrl:swapcaps -variant dvorak us
+riverctl keyboard-layout -options ctrl:swapcaps -variant dvp us
 
 #window rules
 riverctl rule-add csd -app-id "bar"

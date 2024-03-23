@@ -85,20 +85,20 @@ riverctl map-pointer resize $mod BTN_LEFT move-view
 # $mod + Right Mouse Button to resize views
 riverctl map-pointer resize $mod BTN_RIGHT resize-view
 
-for i in $(seq 1 9)
-do
-	tags=$((1 << ($i - 1)))
-
-	#focus tags [0-8]
-	riverctl map normal $mod $i set-focused-tags $tags
-
-	#tag focused view [0-8]
-	riverctl map normal $mod+Shift $i set-view-tags $tags
-
-	#toggle focus of a tag [0-8]
-	riverctl map normal $mod+Control $i toggle-focused-tags $tags
-	
-	#toggle tag of focused view [0-8]
-	riverctl map normal $mod+Shift+Control $i toggle-view-tags $tags
-done
-
+#for i in $(seq 1 9)
+#do
+#	tags=$((1 << ($i - 1)))
+#
+#	#focus tags [0-8]
+#	riverctl map normal $mod $i set-focused-tags $tags
+#
+#	#tag focused view [0-8]
+#	riverctl map normal $mod+Shift $i set-view-tags $tags
+#
+#	#toggle focus of a tag [0-8]
+#	riverctl map normal $mod+Control $i toggle-focused-tags $tags
+#	
+#	#toggle tag of focused view [0-8]
+#	riverctl map normal $mod+Shift+Control $i toggle-view-tags $tags
+#done
+#
