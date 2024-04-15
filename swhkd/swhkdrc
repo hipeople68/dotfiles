@@ -3,6 +3,10 @@ super + `
 #annoyingly, swhkd doesn't support keyboard layouts :(
 #(I may try to implement this myself)
 
+#open terminal
+super + enter
+	kitty
+
 #focus tags [0-8]
 super + 1 
 	riverctl set-focused-tags $((1 << 0))
