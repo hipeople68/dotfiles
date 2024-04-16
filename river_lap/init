@@ -33,8 +33,8 @@ nm-applet --sm-disable &
 waybar &
 
 #startup hotkey daemon
-#swhks &
-#pkexec swhkd &
+swhks &
+pkexec swhkd &
 source /home/emma/.dotfiles/river_lap/keybinds.sh
 
 #input configuration

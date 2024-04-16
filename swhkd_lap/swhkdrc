@@ -1,3 +1,5 @@
+super + `
+	wtype \$
 #annoyingly, swhkd doesn't support keyboard layouts :(
 #(I may try to implement this myself)
 
