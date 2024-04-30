@@ -51,7 +51,7 @@ riverctl map normal $mod+Shift S spawn "slurp | grim -g - $HOME/Pictures/$(date 
 riverctl map normal $mod+Control S spawn "grim $HOME/Pictures/$(date '+%y%m%d_%H-%M-%S').png"
 
 #wallpaper script
-riverctl map resize $mod w spawn "/home/emma/.dotfiles/lapwall.sh"
+riverctl map resize $mod w spawn "/home/emma/.dotfiles/changelapwall.sh"
 
 # $mod+H and $mod+L to decrease/increase the main ratio of rivertile(1)
 riverctl map resize $mod H send-layout-cmd rivertile "main-ratio -0.05"
