@@ -15,7 +15,7 @@ way-displays > /tmp/way-displays.${XDG_VTNR}.${USER}.log 2>&1 &
 
 #random wallpaper script
 swww init
-/home/emma/.dotfiles/lapwall.sh
+/home/emma/.dotfiles/lapwall.sh &
 
 #startup programs
 #pipewire &
