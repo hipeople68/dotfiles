@@ -1,12 +1,12 @@
 @import "mocha.css";
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: IosevkaTerm, FontAwesome;
-    font-size: 12px;
+    font-family: IosevkaTerm NF, FontAwesome;
+    font-size: 11px;
     font-weight: 500;
     box-shadow: inset 0 -3px transparent;
     border: none;
-    border-radius: 3;
+    border-radius: 2;
     margin-top: 1px;
     margin-bottom: 0px;
     margin-left: 1px;
@@ -16,15 +16,15 @@
 window#waybar {
     background-color: transparent;
     color: @text;
-    transition-property: background-color;
+    transition-property: all;
     transition-duration: .5s;
-    /*opacity: 0.9;*/
+    opacity: 0.9;
     /*opacity: 1;*/
 }
 
 window#waybar.hidden {
     /*opacity: 0.2;*/
-    opacity: 1;
+    opacity: 0.2;
 }
 
 /*
@@ -45,7 +45,7 @@ window#waybar.chromium {
 }
 
 #tags button {
-    padding: 0px 5px;
+    padding: 0px 1px;
     background-color: @mantle;
     color: @text;
 }
@@ -56,15 +56,15 @@ window#waybar.chromium {
 	border-bottom: 2px solid @rosewater;
 }
 #workspaces button {
-    padding: 0 5px;
+    padding: 0 2px;
     background-color: @base;
     color: @text;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-#workspaces button:hover {
+/*#workspaces button:hover {
     background: @surface1;
-}
+}*/
 
 #workspaces button.focused {
     background-color: @mantle;
@@ -110,19 +110,19 @@ window#waybar.chromium {
 #clock {
     background-color: @blue;
     color: @crust;
-    padding: 0px 2px 0px 2px;
+    padding: 0px 1px 0px 1px;
 }
 
 #battery {
     background-color: @blue;
     color: @crust;
-    padding: 0px 2px 0px 2px;
+    padding: 0px 1px 0px 1px;
 }
 
 #battery.charging, #battery.plugged {
     color: @green;
     background-color: @crust;
-    padding: 0px 2px 0px 2px;
+    padding: 0px 1px 0px 1px;
 }
 
 @keyframes blink {
@@ -140,145 +140,145 @@ window#waybar.chromium {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    padding: 0px 2px 0px 2px;
+    padding: 0px 1px 0px 1px;
 }
 
 label:focus {
     background-color: @surface0;
-    padding: 0px 2px 0px 2px;
+    padding: 0px 1px 0px 1px;
 }
 
 #cpu {
     background-color: @blue;
     color: @crust;
-    padding: 0px 2px 0px 2px;
+    padding: 0px 1px 0px 1px;
 }
 
 #memory {
     background-color: @blue;
-    padding: 0px 2px 0px 2px;
+    padding: 0px 1px 0px 1px;
     color: @crust;
 }
 
 #disk {
     background-color: @blue;
     color: @crust;
-    padding: 0px 2px 0px 2px;
+    padding: 0px 1px 0px 1px;
 }
 
 #backlight {
     background-color: @blue;
     color: @crust;
-    padding: 0px 2px 0px 2px;
+    padding: 0px 1px 0px 1px;
 }
 
 #network {
     background-color: @blue;
     color: @crust;
-    padding: 0px 2px 0px 2px;
+    padding: 0px 1px 0px 1px;
 }
 
 #network.disconnected {
     background-color: @yellow;
     color: @crust;
-    padding: 0px 2px 0px 2px;
+    padding: 0px 1px 0px 1px;
 }
 
 #pulseaudio {
     background-color: @blue;
     color: @crust;
-    padding: 0px 2px 0px 2px;
+    padding: 0px 1px 0px 1px;
 }
 
 #pulseaudio.muted {
     background-color: @yellew;
     color: @crust;
-    padding: 0px 2px 0px 2px;
+    padding: 0px 1px 0px 1px;
 }
 
 #custom-media {
     background-color: @blue;
     color: @crust;
     min-width: 100px;
-    padding: 0px 2px 0px 2px;
+    padding: 0px 1px 0px 1px;
 }
 
 #custom-media.custom-spotify {
     background-color: @green;
-    padding: 0px 2px 0px 2px;
+    padding: 0px 1px 0px 1px;
 }
 
 #custom-media.custom-vlc {
     background-color: @green;
-    padding: 0px 2px 0px 2px;
+    padding: 0px 1px 0px 1px;
 }
 
 #temperature {
     background-color: @blue;
     color: @crust;
-    padding: 0px 2px 0px 2px;
+    padding: 0px 1px 0px 1px;
 }
 
 #temperature.critical {
     background-color: @red;
-    padding: 0px 2px 0px 2px;
+    padding: 0px 1px 0px 1px;
 }
 
 #tray {
     background-color: @surface1;
-    padding: 0px 2px 0px 2px;
+    padding: 0px 1px 0px 1px;
 }
 
 #tray > .passive {
     -gtk-icon-effect: dim;
-    padding: 0px 2px 0px 2px;
+    padding: 0px 1px 0px 1px;
 }
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
     background-color: @overlay2;
-    padding: 0px 2px 0px 2px;
+    padding: 0px 1px 0px 1px;
 }
 
 #idle_inhibitor {
     background-color: @blue;
     color: @crust;
-    padding: 0px 2px 0px 2px;
+    padding: 0px 1px 0px 1px;
 }
 
 #idle_inhibitor.activated {
     background-color: @green;
     color: @crust;
-    padding: 0px 2px 0px 2px;
+    padding: 0px 1px 0px 1px;
 }
 
 #language {
     background: @blue;
     color: @crust;
-    padding: 0 2px 0 4px;
+    padding: 0 1px 0 4px;
     min-width: 16px;
 }
 
 #keyboard-state {
     background: @blue;
     color: @crust;
-    padding: 0 2px 0 4px;
+    padding: 0 1px 0 4px;
     min-width: 16px;
 }
 
 #keyboard-state > label {
     padding: 0 5px;
-    padding: 0 2px 0 4px;
+    padding: 0 1px 0 4px;
 }
 
 #keyboard-state > label.locked {
     background: rgba(0, 0, 0, 0.2);
-    padding: 0 2px 0 4px;
+    padding: 0 1px 0 4px;
 }
 
 #custom-dunst {
 		background: @blue;
 		color: @crust;
-		padding: 0px 2px 0px 2px;
+		padding: 0px 1px 0px 1px;
 		/*min-width: 20px;*/
 }

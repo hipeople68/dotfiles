@@ -1,19 +1,22 @@
 {
      "layer": "top", // Waybar at top layer
      "position": "top", // Waybar position (top|bottom|left|right)
-     "height": 24, // Waybar height (to be removed for auto height)
+    "height": 32, // Waybar height (to be removed for auto height)
     //"width": 1280, // Waybar width
     "spacing": 2, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["custom/media","river/mode", "clock"],
+    "modules-left": ["river/mode", "clock"],
     "modules-center": ["river/tags"],
     "modules-right": ["pulseaudio", "network", "cpu", "memory", "backlight", "battery", "custom/dunst", "tray"],
     //Modules configuration
 
     "tray": {
-        // "icon-size": 21,
-        "spacing": 10
+    	"icon-size": 14,
+        "spacing": 4
     },
+	"river/tags": {
+		"tag-lables": ["1", "2", "3", "4", "5", "6", "7", "8", "9",]
+	},
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
@@ -41,11 +44,11 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
+        "format-wifi": "{essid} ({signalStrength}%)",
+        "format-ethernet": "{ipaddr}/{cidr}",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "Disconnected",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
