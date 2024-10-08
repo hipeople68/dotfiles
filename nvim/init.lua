@@ -2,6 +2,7 @@
 local opt = vim.opt
 local fn = vim.fn
 local execute = vim.api.nvim_command
+local map = vim.keymap
 
 --Lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -19,6 +20,7 @@ vim.opt.rtp:prepend(lazypath)
 --plugin/extension thingies
 require('plugins')
 
+
 --options
 opt.linebreak=true
 opt.number=true
@@ -26,6 +28,9 @@ opt.tgc=true
 opt.termguicolors=true
 opt.tabstop=4
 opt.shiftwidth=4
+
+--keybinds (MOVE TO DIFFERENT FILE LATER)
+map.set("n", "<C-L><C-L>", "<cmd> :set rnu!<CR>")
 
 --lazy.nvim
 require("lazy").setup("plugins")
