@@ -24,6 +24,7 @@ require('plugins')
 --options
 opt.linebreak=true
 opt.number=true
+opt.relativenumber=true
 opt.tgc=true
 opt.termguicolors=true
 opt.tabstop=4
