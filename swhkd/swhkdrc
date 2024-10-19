@@ -1,91 +1,91 @@
-super + `
-	wtype \$
+#super + `
+#	wtype \$
 #annoyingly, swhkd doesn't support keyboard layouts :(
 #(I may try to implement this myself)
 
 #open terminal
-super + enter
-	kitty
+#super + enter
+#	kitty
 
 #focus tags [0-8]
-super + 1 
-	riverctl set-focused-tags $((1 << 0))
-super + 2 
-	riverctl set-focused-tags $((1 << 1))
-super + 3 
-	riverctl set-focused-tags $((1 << 2))
-super + 4 
-	riverctl set-focused-tags $((1 << 3))
-super + 5 
-	riverctl set-focused-tags $((1 << 4))
-super + 6 
-	riverctl set-focused-tags $((1 << 5))
-super + 7 
-	riverctl set-focused-tags $((1 << 6))
-super + 8 
-	riverctl set-focused-tags $((1 << 7))
-super + 9 
-	riverctl set-focused-tags $((1 << 8))
+#super + 1 
+#	riverctl set-focused-tags $((1 << 0))
+#super + 2 
+#	riverctl set-focused-tags $((1 << 1))
+#super + 3 
+#	riverctl set-focused-tags $((1 << 2))
+#super + 4 
+#	riverctl set-focused-tags $((1 << 3))
+#super + 5 
+#	riverctl set-focused-tags $((1 << 4))
+#super + 6 
+#	riverctl set-focused-tags $((1 << 5))
+#super + 7 
+#	riverctl set-focused-tags $((1 << 6))
+#super + 8 
+#	riverctl set-focused-tags $((1 << 7))
+#super + 9 
+#	riverctl set-focused-tags $((1 << 8))
 
 #tag focused view [0-8]
-super + shift + 1 
-	riverctl set-view-tags $((1 << 0))
-super + shift + 2 
-	riverctl set-view-tags $((1 << 1))
-super + shift + 3 
-	riverctl set-view-tags $((1 << 2))
-super + shift + 4 
-	riverctl set-view-tags $((1 << 3))
-super + shift + 5 
-	riverctl set-view-tags $((1 << 4))
-super + shift + 6 
-	riverctl set-view-tags $((1 << 5))
-super + shift + 7 
-	riverctl set-view-tags $((1 << 6))
-super + shift + 8 
-	riverctl set-view-tags $((1 << 7))
-super + shift + 9 
-	riverctl set-view-tags $((1 << 8))
+#super + shift + 1 
+#	riverctl set-view-tags $((1 << 0))
+#super + shift + 2 
+#	riverctl set-view-tags $((1 << 1))
+#super + shift + 3 
+#	riverctl set-view-tags $((1 << 2))
+#super + shift + 4 
+#	riverctl set-view-tags $((1 << 3))
+#super + shift + 5 
+#	riverctl set-view-tags $((1 << 4))
+#super + shift + 6 
+#	riverctl set-view-tags $((1 << 5))
+#super + shift + 7 
+#	riverctl set-view-tags $((1 << 6))
+#super + shift + 8 
+#	riverctl set-view-tags $((1 << 7))
+#super + shift + 9 
+#	riverctl set-view-tags $((1 << 8))
 
 #toggle focus of a tag [0-8]
-super + control + 1 
-	riverctl toggle-focused-tags $((1 << 0))
-super + control + 2 
-	riverctl toggle-focused-tags $((1 << 1))
-super + control + 3 
-	riverctl toggle-focused-tags $((1 << 2))
-super + control + 4 
-	riverctl toggle-focused-tags $((1 << 3))
-super + control + 5 
-	riverctl toggle-focused-tags $((1 << 4))
-super + control + 6 
-	riverctl toggle-focused-tags $((1 << 5))
-super + control + 7 
-	riverctl toggle-focused-tags $((1 << 6))
-super + control + 8 
-	riverctl toggle-focused-tags $((1 << 7))
-super + control + 9 
-	riverctl toggle-focused-tags $((1 << 8))
+#super + control + 1 
+#	riverctl toggle-focused-tags $((1 << 0))
+#super + control + 2 
+#	riverctl toggle-focused-tags $((1 << 1))
+#super + control + 3 
+#	riverctl toggle-focused-tags $((1 << 2))
+#super + control + 4 
+#	riverctl toggle-focused-tags $((1 << 3))
+#super + control + 5 
+#	riverctl toggle-focused-tags $((1 << 4))
+#super + control + 6 
+#	riverctl toggle-focused-tags $((1 << 5))
+#super + control + 7 
+#	riverctl toggle-focused-tags $((1 << 6))
+#super + control + 8 
+#	riverctl toggle-focused-tags $((1 << 7))
+#super + control + 9 
+#	riverctl toggle-focused-tags $((1 << 8))
 
 #toggle tag of focused view [0-8]
-super + shift + control + 1 
-	riverctl toggle-view-tags $((1 << 0))
-super + shift + control + 2 
-	riverctl toggle-view-tags $((1 << 1))
-super + shift + control + 3 
-	riverctl toggle-view-tags $((1 << 2))
-super + shift + control + 4 
-	riverctl toggle-view-tags $((1 << 3))
-super + shift + control + 5 
-	riverctl toggle-view-tags $((1 << 4))
-super + shift + control + 6 
-	riverctl toggle-view-tags $((1 << 5))
-super + shift + control + 7 
-	riverctl toggle-view-tags $((1 << 6))
-super + shift + control + 8 
-	riverctl toggle-view-tags $((1 << 7))
-super + shift + control + 9 
-	riverctl toggle-view-tags $((1 << 8))
+#super + shift + control + 1 
+#	riverctl toggle-view-tags $((1 << 0))
+#super + shift + control + 2 
+#	riverctl toggle-view-tags $((1 << 1))
+#super + shift + control + 3 
+#	riverctl toggle-view-tags $((1 << 2))
+#super + shift + control + 4 
+#	riverctl toggle-view-tags $((1 << 3))
+#super + shift + control + 5 
+#	riverctl toggle-view-tags $((1 << 4))
+#super + shift + control + 6 
+#	riverctl toggle-view-tags $((1 << 5))
+#super + shift + control + 7 
+#	riverctl toggle-view-tags $((1 << 6))
+#super + shift + control + 8 
+#	riverctl toggle-view-tags $((1 << 7))
+#super + shift + control + 9 
+#	riverctl toggle-view-tags $((1 << 8))
 
 ## close focused view
 #riverctl map normal $mod+Shift C close
