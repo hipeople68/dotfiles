@@ -127,4 +127,4 @@ eval "$(starship init zsh)"
 
 #syntax highlighting
 source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /home/emma/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
