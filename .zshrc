@@ -10,6 +10,10 @@ fi
 if [[ ! -e ~/.zsh/powerlevel10k ]]; then
   git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.zsh/powerlevel10k
 fi
+if [[ ! -e ~/.zsh/zsh-vi-mode ]]; then
+  git clone --depth=1 https://github.com/jeffreytse/zsh-vi-mode ~/.zsh/zsh-vi-mode
+fi
+
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -46,6 +50,9 @@ autoload -Uz compinit
 compinit
 source /home/emma/.dotfiles/zsh/completions.zsh
 
+#vim mode
+source ~/.zsh/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+
 # autocompletion using arrow keys (based on history)
 bindkey '\e[A' history-search-backward
 bindkey '\e[B' history-search-forward
@@ -65,6 +72,8 @@ alias icat="kitty +kitten icat"
 alias bookmus="CMUS_HOME=/home/emma/Audiobooks cmus"
 alias scratchpad="nvim /home/emma/Documents/scratchpad"
 alias rsync="rsync --partial --progress"
+
+alias markHelper="7z e *.zip && javac *.java"
 
 alias javac-fx="javac --module-path /usr/lib/jvm/java-17-openjdk/lib/javafx.base.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx.controls.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx-swt.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx.fxml.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx.graphics.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx.swing.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx.web.jar: --add-modules javafx.controls,javafx.fxml "
 alias java-fx="java --module-path /usr/lib/jvm/java-17-openjdk/lib/javafx.base.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx.controls.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx-swt.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx.fxml.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx.graphics.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx.swing.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx.web.jar: --add-modules javafx.controls,javafx.fxml "

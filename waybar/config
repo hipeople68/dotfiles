@@ -8,6 +8,8 @@
     "modules-left": ["river/mode", "clock"],
     "modules-center": ["river/tags"],
     "modules-right": ["pulseaudio", "network", "cpu", "memory", "backlight", "battery", "custom/dunst", "tray"],
+
+	
     //Modules configuration
 
     "tray": {
