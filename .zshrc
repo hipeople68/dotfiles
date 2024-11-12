@@ -1,4 +1,3 @@
-
 #TODO
 #Configure Powerlevel10k
 #fancy colours :)
@@ -10,9 +9,6 @@ fi
 if [[ ! -e ~/.zsh/powerlevel10k ]]; then
   git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.zsh/powerlevel10k
 fi
-if [[ ! -e ~/.zsh/zsh-vi-mode ]]; then
-  git clone --depth=1 https://github.com/jeffreytse/zsh-vi-mode ~/.zsh/zsh-vi-mode
-fi
 
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -21,6 +17,9 @@ fi
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+
+#keybinds
+bindkey -e
 
 #history
 HISTSIZE=1000
@@ -50,9 +49,6 @@ autoload -Uz compinit
 compinit
 source /home/emma/.dotfiles/zsh/completions.zsh
 
-#vim mode
-source ~/.zsh/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-
 # autocompletion using arrow keys (based on history)
 bindkey '\e[A' history-search-backward
 bindkey '\e[B' history-search-forward
@@ -73,10 +69,12 @@ alias bookmus="CMUS_HOME=/home/emma/Audiobooks cmus"
 alias scratchpad="nvim /home/emma/Documents/scratchpad"
 alias rsync="rsync --partial --progress"
 
+#help with marking, remove after job is done
 alias markHelper="7z e *.zip && javac *.java"
+alias markfxHelper="7z e *.zip && javac-fx *.java"
 
-alias javac-fx="javac --module-path /usr/lib/jvm/java-17-openjdk/lib/javafx.base.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx.controls.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx-swt.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx.fxml.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx.graphics.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx.swing.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx.web.jar: --add-modules javafx.controls,javafx.fxml "
-alias java-fx="java --module-path /usr/lib/jvm/java-17-openjdk/lib/javafx.base.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx.controls.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx-swt.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx.fxml.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx.graphics.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx.swing.jar:/usr/lib/jvm/java-17-openjdk/lib/javafx.web.jar: --add-modules javafx.controls,javafx.fxml "
+alias javac-fx="javac --module-path /home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx.base.jar:/home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx.controls.jar:/home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx-swt.jar:/home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx.fxml.jar:/home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx.graphics.jar:/home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx.swing.jar:/home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx.web.jar: --add-modules javafx.controls,javafx.fxml "
+alias java-fx="java --module-path /home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx.base.jar:/home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx.controls.jar:/home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx-swt.jar:/home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx.fxml.jar:/home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx.graphics.jar:/home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx.swing.jar:/home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx.web.jar: --add-modules javafx.controls,javafx.fxml "
 
 eval "$(thefuck --alias)"
 eval "$(zoxide init zsh)"
