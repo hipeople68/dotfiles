@@ -29,6 +29,7 @@ opt.tgc=true
 opt.termguicolors=true
 opt.tabstop=4
 opt.shiftwidth=4
+vim.cmd('filetype on')
 
 --keybinds (MOVE TO DIFFERENT FILE LATER)
 map.set("n", "<C-L><C-L>", "<cmd> :set rnu!<CR>")
