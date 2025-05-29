@@ -5,8 +5,8 @@
     //"width": 1280, // Waybar width
     "spacing": 2, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["river/mode", "clock"],
-    "modules-center": ["river/tags"],
+    "modules-left": ["clock"],
+    "modules-center": ["hyprland/workspaces"],
     "modules-right": ["pulseaudio", "network", "cpu", "memory", "backlight", "battery", "custom/dunst", "tray"],
 
 	
@@ -16,8 +16,8 @@
     	"icon-size": 14,
         "spacing": 4
     },
-	"river/tags": {
-		"tag-lables": ["1", "2", "3", "4", "5", "6", "7", "8", "9",]
+	"hyprland/workspaces": {
+		"active-only": false,
 	},
     "clock": {
         // "timezone": "America/New_York",
