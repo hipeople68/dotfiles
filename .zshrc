@@ -68,10 +68,8 @@ alias icat="kitty +kitten icat"
 alias bookmus="CMUS_HOME=/home/emma/Audiobooks cmus"
 alias scratchpad="nvim /home/emma/Documents/scratchpad"
 alias rsync="rsync --partial --progress"
+alias eww="~/git/eww/target/release/eww"
 
-#help with marking, remove after job is done
-alias markHelper="7z e *.zip && javac *.java"
-alias markfxHelper="7z e *.zip && javac-fx *.java"
 
 alias javac-fx="javac --module-path /home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx.base.jar:/home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx.controls.jar:/home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx-swt.jar:/home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx.fxml.jar:/home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx.graphics.jar:/home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx.swing.jar:/home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx.web.jar: --add-modules javafx.controls,javafx.fxml "
 alias java-fx="java --module-path /home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx.base.jar:/home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx.controls.jar:/home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx-swt.jar:/home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx.fxml.jar:/home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx.graphics.jar:/home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx.swing.jar:/home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx.web.jar: --add-modules javafx.controls,javafx.fxml "
