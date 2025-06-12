@@ -1,0 +1,4 @@
+(defwindow powermenu
+	:monitor 0
+	:geometry ()
+)
