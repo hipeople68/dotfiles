@@ -22,11 +22,14 @@ fi
 bindkey -e
 
 #history
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=1000000
+SAVEHIST=1000000
 HISTFILE=~/.zsh_history
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt EXTENDED_HISTORY
+setopt APPEND_HISTORY
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
 
 # Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
