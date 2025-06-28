@@ -46,7 +46,6 @@ if [[ ! -f "$SSH_AUTH_SOCK" ]]; then
     source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
 fi
 
-
 #autocomplete
 autoload -Uz compinit
 compinit
@@ -66,12 +65,18 @@ source /usr/share/doc/pkgfile/command-not-found.zsh
 #prompt
 source ~/.zsh/powerlevel10k/powerlevel10k.zsh-theme
 
+#fzf setup
+source <(fzf --zsh)
+export FZF_DEFAULT_COMMAND="fd -H . $HOME"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 #aliases
 alias icat="kitty +kitten icat"
 alias bookmus="CMUS_HOME=/home/emma/Audiobooks cmus"
 alias scratchpad="nvim /home/emma/Documents/scratchpad"
 alias rsync="rsync --partial --progress"
 alias eww="~/git/eww/target/release/eww"
+alias fzfi="wl-copy <\$(fd . ~ -x file | rg image | awk -F':' '{print \$1}' | fzf)"
 
 
 alias javac-fx="javac --module-path /home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx.base.jar:/home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx.controls.jar:/home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx-swt.jar:/home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx.fxml.jar:/home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx.graphics.jar:/home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx.swing.jar:/home/emma/git/fft-s1t03/lib/javafx-sdk-23.0.1/lib/javafx.web.jar: --add-modules javafx.controls,javafx.fxml "
